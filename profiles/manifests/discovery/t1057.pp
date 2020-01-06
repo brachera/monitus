@@ -1,4 +1,4 @@
-# A profile for controlling controls around ATT&CK tecnique T1057
+# A profile for controlling auditing around ATT&CK tecnique T1057
 # URL: https://attack.mitre.org/techniques/T1057/
 #
 # @param enabled - boolean
