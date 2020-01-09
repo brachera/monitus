@@ -1,6 +1,6 @@
 require 'etc'
 
-    Facter::Util::Resolution.exec('cat /etc/passwd').each_line do |line|
+    Facter::Util::Resolution.exec('/usr/bin/cat /etc/passwd').each_line do |line|
         line.strip!
         user = line.split(':')
 
