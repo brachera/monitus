@@ -8,5 +8,6 @@ require 'etc'
     end
     
     Facter.add('users') do
-      setcode { users.sort.join(',') }
+      setcode do 
+         users.sort.join(',')
     end
