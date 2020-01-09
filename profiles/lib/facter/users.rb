@@ -1,11 +1,12 @@
 require 'etc'
 
-Etc.passwd { |user|
+    Facter::Util::Resolution.exec('cat /etc/passwd').each_line do |line|
+        line.strip!
+        user = line.split(':')
 
-   Facter.add("#{user.name}") do
-      setcode do
-         user.name
-      end
-   end
-
-}
+        users << user[0] unless user[2].to_i < 500
+    end
+    
+    Facter.add(:users) do
+      setcode { users.sort.join(',') }
+    end
