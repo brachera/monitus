@@ -9,6 +9,6 @@ require 'etc'
     
     Facter.add('users') do
       setcode do 
-         users.sort.join(',')
+         'test'
       end
     end
