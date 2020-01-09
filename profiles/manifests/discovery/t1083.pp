@@ -1,3 +1,7 @@
+# A profile for controlling auditing around ATT&CK technique T1083
+# URL: https://attack.mitre.org/techniques/T1083/
+#
+# @param enabled - boolean
 class profiles::discovery::t1083(
     $enabled = lookup('profiles::discovery::t1083', Boolean, 'first', true),
 ) {
