@@ -8,6 +8,7 @@ class profiles::discovery::t1087 (
 ){
   $rules = ['-w /etc/passwd -p r -k t1087_account_discovery',
             '-w /etc/shadow -p r -k t1087_account_discovery',
+            '-w /usr/bin/id -p x -k t1087_account_discovery',
             '-w /etc/group -p r -k t1087_account_discovery',
             '-w /usr/bin/users -p x -k t1087_account_discovery']
 
